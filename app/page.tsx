@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white">
+      <section id="hero" className="relative overflow-hidden bg-white">
         <div className="absolute inset-0 z-0 bg-[#f8fafc]">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-5 bg-cover bg-center" />
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute -inset-4 rounded-xl bg-blue-100/50 blur-xl"></div>
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src="/4799410.jpg"
                   alt="Internet connection illustration"
                   width={600}
                   height={600}
@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-gray-50 py-24 relative overflow-hidden">
+      <section id="paket" className="bg-gray-50 py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iLjA1Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTAtMTZjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDQtMS44IDQtNCA0LTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0LTEuOCA0LTQgNC00LTEuOC00LTRtLTE2IDBjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTE2LTE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDQtMS44IDQtNCA0LTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0LTEuOCA0LTQgNC00LTEuOC00LTRtLTE2IDBjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTE2LTE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDQtMS44IDQtNCA0LTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0LTEuOCA0LTQgNC00LTEuOC00LTQiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -172,7 +172,7 @@ export default function Home() {
       </section>
 
       {/* Coverage Section */}
-      <section className="bg-white py-24">
+      <section id="jangkauan" className="bg-white py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="space-y-8">
@@ -277,7 +277,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-white py-24">
+      <section id="faq" className="bg-white py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center justify-center rounded-full bg-blue-100 p-3 mb-4">
@@ -312,7 +312,7 @@ export default function Home() {
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
                 Daftar Sekarang
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
+              <Button size="lg" variant="outline" className="border-white text-blue-600 hover:bg-blue-50">
                 Hubungi Kami
               </Button>
             </div>

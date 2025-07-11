@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Zap, Wifi, Shield } from "lucide-react"
+import { CheckCircle, Zap, Wifi, Shield, Star } from "lucide-react"
 
 interface PricingCardProps {
   name: string
@@ -40,36 +40,51 @@ export default function PricingCard({
     }
   }
 
+  const getSpeedColor = () => {
+    switch (icon) {
+      case "family":
+        return "text-blue-500"
+      case "pro":
+        return "text-indigo-600"
+      default:
+        return "text-blue-400"
+    }
+  }
+
   return (
     <div
       className={`relative rounded-2xl ${
-        popular ? "border-2 border-blue-600 shadow-xl" : "border border-gray-200 shadow-md"
-      } bg-white p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer overflow-hidden group`}
+        popular ? "border-2 border-blue-600 shadow-xl pt-8" : "border border-gray-200 shadow-md"
+      } bg-white p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer overflow-hidden group`}
     >
-      {/* Background decoration - fixed z-index and positioning */}
+      {/* Background decoration */}
       <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-blue-50 opacity-70 group-hover:bg-blue-100 transition-colors z-0"></div>
       <div className="absolute -left-16 -bottom-16 h-40 w-40 rounded-full bg-blue-50 opacity-70 group-hover:bg-blue-100 transition-colors z-0"></div>
 
+      {/* Popular badge */}
       {popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-1.5 text-sm font-medium text-white shadow-md z-20">
-          Terpopuler
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 mt-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-1.5 text-sm font-medium text-white shadow-md z-20 flex items-center gap-1">
+          <Star className="h-4 w-4" />
+          <span>Terpopuler</span>
         </div>
       )}
 
       <div className="relative z-10">
-        {/* Icon - fixed positioning and z-index */}
+        {/* Icon */}
         <div
-          className={`absolute top-0 right-0 h-14 w-14 rounded-full bg-gradient-to-r ${getBgGradient()} flex items-center justify-center shadow-md transform transition-transform group-hover:rotate-12 z-10`}
+          className={`absolute top-0 right-0 h-16 w-16 rounded-2xl bg-gradient-to-r ${getBgGradient()} flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 z-10`}
         >
           {getIcon()}
         </div>
 
-        <div className="mb-6 text-left pt-4">
-          <h3 className="text-2xl font-bold text-gray-800">{name}</h3>
-          <div className="mt-2 text-4xl font-bold text-blue-600">{speed}</div>
+        {/* Package name and speed */}
+        <div className="mb-8 text-left pt-4">
+          <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">{name}</h3>
+          <div className={`mt-2 text-4xl font-bold ${getSpeedColor()} transition-colors`}>{speed}</div>
         </div>
 
-        <div className="mb-6 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 p-4">
+        {/* Price */}
+        <div className="mb-8 rounded-2xl bg-gradient-to-r from-blue-50 to-blue-100 p-6 transform transition-all duration-300 group-hover:scale-105">
           <div className="text-sm text-gray-600 font-medium">Mulai dari</div>
           <div className="flex items-baseline flex-wrap">
             <span className="text-2xl font-bold text-gray-800">Rp</span>
@@ -78,15 +93,17 @@ export default function PricingCard({
           </div>
         </div>
 
-        <ul className="mb-6 space-y-3">
+        {/* Features */}
+        <ul className="mb-8 space-y-4">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
-              <span className="text-gray-700">{feature}</span>
+            <li key={index} className="flex items-start gap-3 group/item">
+              <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600 group-hover/item:scale-110 transition-transform" />
+              <span className="text-gray-700 group-hover/item:text-blue-600 transition-colors">{feature}</span>
             </li>
           ))}
         </ul>
 
+        {/* CTA Button */}
         <Button
           className={`w-full group relative overflow-hidden rounded-xl h-12 ${
             popular ? "bg-blue-600 hover:bg-blue-700" : "bg-gray-900 hover:bg-gray-800"

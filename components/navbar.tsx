@@ -20,31 +20,31 @@ export default function Navbar() {
           </div>
           <nav className="hidden md:flex md:space-x-1">
             <Link
-              href="#"
+              href="/#hero"
               className="px-4 py-2 text-gray-700 hover:text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
             >
               Beranda
             </Link>
             <Link
-              href="#"
+              href="/#paket"
               className="px-4 py-2 text-gray-700 hover:text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
             >
               Paket
             </Link>
             <Link
-              href="#"
+              href="/#jangkauan"
               className="px-4 py-2 text-gray-700 hover:text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
             >
               Jangkauan
             </Link>
             <Link
-              href="#"
+              href="/#tentang-kami"
               className="px-4 py-2 text-gray-700 hover:text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
             >
               Tentang Kami
             </Link>
             <Link
-              href="#"
+              href="/#faq"
               className="px-4 py-2 text-gray-700 hover:text-blue-600 rounded-md hover:bg-blue-50 transition-colors"
             >
               FAQ
@@ -80,35 +80,35 @@ export default function Navbar() {
         <div className="md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
             <Link
-              href="#"
+              href="/#hero"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Beranda
             </Link>
             <Link
-              href="#"
+              href="/#paket"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Paket
             </Link>
             <Link
-              href="#"
+              href="/#jangkauan"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Jangkauan
             </Link>
             <Link
-              href="#"
+              href="/#tentang-kami"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Tentang Kami
             </Link>
             <Link
-              href="#"
+              href="/#faq"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
