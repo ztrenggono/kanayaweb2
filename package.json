@@ -1,12 +1,9 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "kanaya-website-project",
+  "version": "1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "Zaldi Trenggono"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
